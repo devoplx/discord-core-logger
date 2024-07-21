@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const { ActivityType } = require('discord.js')
 
 const app = express();
 const PORT = 9000; // Port for the Express server
@@ -29,7 +30,14 @@ const client = new Client({
 
 client.once('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  logEvent('BotStarted', { message: 'Bot has started successfully.' });
+	client.user.setPresence({ 
+    activities: [{ 
+        name: 'over Devoplx discord logs', 
+        type: ActivityType.Watching, 
+    }], 
+    status: 'online' 
+});
+  logEvent('BotStarted', { message: 'Bot has started successfully.', timestamp: Date.now()});
 });
 
 client.on('messageCreate', (message) => {
