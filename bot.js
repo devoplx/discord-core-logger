@@ -27,7 +27,7 @@ client.login(DISCORD_TOKEN);
 app.use(bodyParser.json());
 
 app.post('/send-embed', async (req, res) => {
-  const { channelId, color, title, username, description } = req.body;
+  const { channelId, color, title, description } = req.body;
 
   try {
     const guild = client.guilds.cache.get(SERVER_ID);
@@ -44,7 +44,7 @@ app.post('/send-embed', async (req, res) => {
       .setColor(color)
       .setTitle(title)
       .setDescription(description)
-      .setFooter({ text: username });
+      .setFooter({ text: `Devoplx Core Logger System` });
 
     await channel.send({ embeds: [embed] });
     res.status(200).send('Embed sent successfully!');
