@@ -1,0 +1,17 @@
+{
+  "name": "discord-core-logger",
+  "version": "1.0.0",
+  "description": "A core bot for devoplx discord. Handles the logging aspect.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "discord.js": "^14.15.3",
+    "express": "^4.19.2"
+  }
+}
