@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = 3000; // Port for the Express server
+const PORT = 9000; // Port for the Express server
 
 // Replace with your actual bot token and server ID
 const DISCORD_TOKEN = process.env.token;
